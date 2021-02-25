@@ -1,0 +1,36 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Ecommerce API",
+        "description": "Documentacion API Ecommerce - curso NodeJs"
+    },
+    "schemes": [
+        "http"
+    ],
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+        {"name": "Producto"},
+        {"name": "Usuario"}
+    ],
+    "paths": {
+        "/products": {
+            "get": {
+                "tags": ["Producto"],
+                "summary": "GET Productos",
+                "description": "Devuelve una lista con todos los productos.",
+                "produces": "application/json",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "featured",
+                        "required": false,
+                        "description": "Filtra los productos destacados"
+                    }
+                ]
+
+            }
+        }
+    }
+}
